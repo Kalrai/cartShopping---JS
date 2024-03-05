@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compra</title>
+    <link rel="stylesheet" href="Carrinho.css">
+</head>
+<body>
+    <div class="centraliza">
+    <section class="sessaoPrincipal">
+
+        <h1 class="titulo">Carrinho de compras</h1>
+        
+        <div class="statusCarrinho">
+            <div class="statusTituloQuantidade">
+                <p>Carrinho de compras</p>
+                <!-- Função de diz a quantidade total de itens no carrinho -->
+                <p>Você tem <span class="quantidadeDeItensNoCarrinho"> x </span>itens no seu carrinho</p>
+            </div>
+            <div class="ordenarStatus">
+                <!-- Filtro para ordenar os Produtos -->
+                <label for="filtro">Ordenar</label>
+                <select name="filtro" id="filtro">
+                    <option value="barato">Preço R$↓</option>
+                    <option value="caro">Preço R$↑</option>
+                </select>
+            </div>
+        
+        </div>
+
+        <main class="mProdutos">
+            <!-- <div class="produto">
+                <div class="prioridadeProduto">
+                    <img class="imgProduto" src="imagens/iphone.png" alt="imagem celular">
+                    
+                    <div class="nomePProduto">
+                        <h1 class="nomeProduto">Iphone 12</h1>
+                        <p class="descricaoProduto">256GB, Pourple</p>
+                    </div>
+                 </div>
+                    <div class="valorInputProduto">
+                        <p class="valorProduto">R$2,999,90</p>
+                        <input type="number" value="1" min="1" name="quantidadeProduto" id="quantidadeProduto">
+                    </div>
+                <img class="trashIcon" src="imagens/lixo-cinza.png" alt="Excluir item do carrinho de compras">
+            </div> -->
+        </main>
+
+        <section onclick="" class="sessaoSumario">
+
+            <div class="subtotalProdutos">
+                <p>Subtotal</p>
+                <p>R$xxxx,xx</p>
+            </div>
+    
+            <div class="freteProdutos">
+                <p>Frete</p>
+                <p class="ValorFrete">R$xx,xx</p>
+            </div>
+    
+            <div class="totalProdutos">
+                <p>Total(Subtotal + Frete)</p>
+                <p>R$xxxx,xx</p>
+            </div>
+    
+            <button class="comprarTudoCarrinho">Comprar Carrinho R$<span class="valorCarrinhoTodo">xxxx,xx</span></button>
+        </section>
+    </section>
+        
+    
+
+</div>
+</body>
+<script src="Carrinho.js"></script>
+</html>

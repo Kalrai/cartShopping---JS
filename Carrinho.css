@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: white;
+}
+.centraliza{
+    padding-top: 1%;
+}
+.sessaoPrincipal {
+    padding-top: 1%;
+    border-radius: 1.2%;
+    margin: auto;
+    background-color: rgb(29, 29, 29);
+    width: 90vw;
+    height: 80%;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 60px;
+}
+/* status */
+.statusCarrinho{
+    font-size: 1.3rem;
+    padding-top: 1%;
+    border-top: 2px solid rgb(44, 44, 44);
+    width: 90%;
+    margin: auto;
+    border-radius: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.statusTituloQuantidade{
+    margin-left: 5%;
+}
+.quantidadeDeItensNoCarrinho{
+    font-weight: 500;
+}
+.ordenarStatus{
+    margin-left: 5%;
+}
+#filtro{
+    border: none;
+    
+    border-radius: 15%;
+    background-color: rgb(78, 78, 78);
+}
+#filtro, #filtro option{
+    font-size: 0.8rem;
+    color: white;
+}
+#filtro:hover{
+    font-size: 0.82rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.356);
+}
+
+/* Produtos */
+.mProdutos{
+    width: 90%;
+    margin: 2% auto auto auto;
+    padding-bottom: 1%;
+}
+.produto{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.185);
+    display: flex;
+    border-radius: 1rem;
+    justify-content: space-between;
+    width: 100%;
+    height: 15%;
+    margin-bottom: 2%
+}
+.produto:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.521);
+}
+.prioridadeProduto{
+    display: contents;
+}
+.nomePProduto{
+    margin-top: 2%;
+    width: 30%;
+    background-color: rgba(0, 255, 255, 0);
+    margin-left: 3%;
+}
+.descricaoProduto{
+    font-size: 1em;
+}
+.nomeProduto{
+    font-size: 1.7rem;
+}
+.imgProduto{
+    border-radius: 1rem 0rem 0rem 1rem;
+    width: auto;
+    height: 30vh;
+}
+.trashIcon{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    height: 3rem;
+    width: 3rem;
+}
+.trashIcon:hover{
+    height: 3.1rem;
+    width: 3.1rem;
+    border-radius: 20%;
+    box-shadow: 2px 2px 10px red;
+}
+.valorInputProduto{
+    margin: auto;
+}
+.valorInputProduto input{
+    width: 15%;
+    border: none;
+    text-align: center;
+    color: white;
+    border-radius: 15%;
+    background-color: rgb(78, 78, 78);
+}
+.valorProduto{
+    font-size: 1.5rem;
+}
+/* Sumário */
+.sessaoSumario{
+    padding: 1%;
+    display: flex;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+    width: 98%;
+    margin: auto;
+    background-color: rgba(37, 37, 37, 0.411);
+}
+.comprarTudoCarrinho{
+    width: 15%;
+    font-weight: 545;
+    border: none;
+    color: rgb(8, 8, 8);
+    border-radius: 1rem;
+    background-color: rgb(25, 233, 77);
+}
