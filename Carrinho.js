@@ -110,7 +110,6 @@ function mostrarProdutosNaTela() {
     function calcSubTotal(){
         for(i=0;i<celulares.length;i++){
             let valor = document.querySelector(`#valorProduto_${i+1}`).textContent
-            alert(valor)
         }
 
     }
