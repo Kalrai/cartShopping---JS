@@ -86,17 +86,20 @@ function mostrarProdutosNaTela() {
         })
 
     
-        prioridadeProduto.appendChild(imgProduto);  
-        nomePProduto.appendChild(descricaoProduto);
+        nomePProduto.appendChild(nomeProduto)
+        nomePProduto.appendChild(descricaoProduto)
+
+        prioridadeProduto.appendChild(imgProduto);
         prioridadeProduto.appendChild(nomePProduto);
-    
+
+
         valorInputProduto.appendChild(valorProduto);
-        valorInputProduto.appendChild(inputQuantidadeProduto); // Adicionando o input ao valorInputProduto
-    
+        valorInputProduto.appendChild(inputQuantidadeProduto);
+
         produto.appendChild(prioridadeProduto);
         produto.appendChild(valorInputProduto);
         produto.appendChild(trashIcon);
-    
+
         mProdutos.appendChild(produto);
     }
 }
