@@ -13,7 +13,7 @@ body {
     background-color: rgb(255, 255, 255);
     color: white;
 }
-.titulo, .navbar-nav .nav-link , p, h1{
+.titulo, .navbar-nav .nav-link , p, h1, label, .nomeProduto{
     color: white;
 }
 

@@ -56,10 +56,11 @@ function mostrarProdutosNaTela() {
         inputQuantidadeProduto.value = '1';
         inputQuantidadeProduto.min = '1';
         inputQuantidadeProduto.name = 'quantidadeProduto';
+        inputQuantidadeProduto.classList.add('quantidadeProduto')
+        inputQuantidadeProduto.addEventListener('change', atualizaQuantidadeDeInput)
         inputQuantidadeProduto.id = `quantidadeProduto_${i+1}`;
-        inputQuantidadeProduto.addEventListener(`input`, function(){
-            calcSubTotal();
-        })
+        inputQuantidadeProduto.addEventListener(`input`, calcSubTotal);
+        // calculando novo valor mostrado na tela de acordo com a quantidade de produtos selecionado
         inputQuantidadeProduto.addEventListener('input', function(){
             let id = this.id.split(`_`)[1];
             let quantidade = parseFloat(this.value)
@@ -70,7 +71,7 @@ function mostrarProdutosNaTela() {
             let pValor = document.querySelector(`#${valorProduto.id}`)
 
             pValor.textContent = preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-        
+            calcSubTotal()
         }); // Adicionando o evento de input ao inputQuantidadeProduto
     
         let trashIcon = document.createElement('img');
@@ -101,8 +102,25 @@ function mostrarProdutosNaTela() {
         produto.appendChild(trashIcon);
 
         mProdutos.appendChild(produto);
+
+        atualizaQuantidadeDeInput()
     }
 }
+//Descobrindo a somatória dos valores dos inputs na tela
+    
+    function atualizaQuantidadeDeInput(){
+        let quantidadeDeInput = document.querySelectorAll('.quantidadeProduto')
+        let x = document.querySelector('.quantidadeDeItensNoCarrinho')
+        let total = 0
+
+        for(i=1; i <= quantidadeDeInput.length;i++){
+            let valorAtual = document.querySelector(`#quantidadeProduto_${i}`).value
+            total += parseFloat(valorAtual)
+            
+        }
+        x.textContent = total+' '
+    }
+
     function atualizaFrete(novoValor){
         let frete = document.querySelector(`.ValorFrete`)
         frete.textContent = ""
@@ -110,18 +128,15 @@ function mostrarProdutosNaTela() {
         frete.textContent = valorFormatado
     }
 
-    function calcSubTotal(){
-        for(i=0;i<celulares.length;i++){
-            let valor = document.querySelector(`#valorProduto_${i+1}`).textContent
-        }
-
+    function calcSubTotal() {
+       //Falta arrumar
     }
 
 
 //Cadastrando Valores / Produtos
 let Iphone12 = addProduto(`Iphone 12`, `imagens/iphone.png`, `256GB, 32GB RAM, Pourple`, 2999.90)
 let Iphone13 = addProduto(`Iphone 13`, `imagens/iphone.png`, `256GB, 32GB RAM, Pourple`, 3999.90)
-let s12 = addProduto(`Xerecao`, `imagens/iphone.png`, `Pourple`, 12.90)
+let s12 = addProduto(`Carregador de Iphone`, `imagens/iphone.png`, `25W Turbo Compatível iPhone X Xr SE 11 12 13 14 Premium LAGUS IMP.`, 99.90)
 
 
 atualizaFrete(45.60);
